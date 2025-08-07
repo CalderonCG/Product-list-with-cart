@@ -1,0 +1,38 @@
+@use "../../styles/variables" as v;
+
+.cart {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 18rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: v.$color-Red;
+  }
+
+  &__figure{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__empty{
+    max-width: 100%;
+    max-height: 10rem;
+    width: auto;
+    height: auto;
+    display: inline-block;
+  }
+
+  &__label{
+    color: v.$color-Rose-500;
+    font-weight: 600;
+  }
+}

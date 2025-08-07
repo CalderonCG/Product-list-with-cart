@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Card.scss";
 import add from "../../assets/icon-add-to-cart.svg";
 
