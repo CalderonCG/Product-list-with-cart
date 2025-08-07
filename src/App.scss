@@ -2,3 +2,18 @@ h1{
     font-size: 2.4rem;
     font-weight: 700;
 }
+
+.container{
+    display: flex;
+
+    &__dessert{
+        width: 65%;
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        gap: 3px;
+    }
+}
+
