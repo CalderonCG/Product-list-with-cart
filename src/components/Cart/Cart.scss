@@ -5,8 +5,10 @@
   box-sizing: border-box;
   min-height: 18rem;
   background-color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 1rem;
+
+  
 
   &__title {
     font-size: 1.6rem;
@@ -34,5 +36,48 @@
   &__label{
     color: v.$color-Rose-500;
     font-weight: 600;
+  }
+
+  &__list{
+    width: 100%;
+  }
+
+  &__total{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__total_price{
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__delivery{
+    width: 100%;
+    background-color: v.$color-background;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+
+
+  &__carbon{
+    font-weight: 700;
+  }
+
+  &__confirm{
+    background-color: v.$color-Red;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    font-weight: 700;
+    font-size: v.$font-size-main;
+    border-radius: 2rem;
+    border: none;
+    margin: 1rem 0;
   }
 }
