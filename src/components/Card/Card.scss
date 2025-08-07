@@ -1,0 +1,49 @@
+@use "../../styles/variables" as v;
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 16rem;
+
+  &__image {
+    width: 16rem;
+    border-radius: 1rem;
+  }
+
+  &__button {
+    width: 60%;
+    padding: 0.6rem;
+    border: 1px solid v.$color-Red;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    transform: translateY(-50%);
+    font-weight: 700;
+  }
+
+
+  &__body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1px;
+    justify-content: start;
+  }
+  &__tag{
+    opacity: 65%;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &__name{
+    font-size: v.$font-size-main;
+  }
+
+  &__price{
+    font-size: v.$font-size-main;
+    font-weight: 700;
+    color: v.$color-Red;
+  }
+}
