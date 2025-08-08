@@ -1,4 +1,4 @@
-@use "../../styles/variables" as v;
+  @use "../../styles/variables" as v;
 
 .card {
   display: flex;
@@ -49,7 +49,7 @@
   }
   &__name {
     margin: 0;
-    font-size: v.$font-size-main;
+    font-size: 16px;
   }
 
   &__price {
