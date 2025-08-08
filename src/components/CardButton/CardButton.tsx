@@ -2,12 +2,13 @@ import CartIcon from "../../assets/icon-add-to-cart.svg?react";
 import AddIcon from "../../assets/icon-increment-quantity.svg?react";
 import SubstractIcon from "../../assets/icon-decrement-quantity.svg?react";
 import "./CardButton.scss";
+import type { Dispatch } from "react";
 
 type Action = "add" | "substract";
 
 type props = {
   counter: number;
-  reducer: (action: Action) => number;
+  reducer: Dispatch<Action>;
 };
 
 function CardButton({ counter, reducer }: props) {
