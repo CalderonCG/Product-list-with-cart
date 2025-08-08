@@ -1,4 +1,4 @@
-import React, { createContext, useState, type ReactNode } from "react";
+import { createContext, useState, type ReactNode } from "react";
 
 export type CartItem = {
   name: string;
@@ -15,7 +15,7 @@ type CartItemContext = {
 };
 
 export const CartContext = createContext<CartItemContext | undefined>(
-  undefined
+  {} as CartItemContext
 );
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {

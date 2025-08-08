@@ -1,17 +1,19 @@
 import "./Card.scss";
 import type { Dessert } from "../../services/jsonService";
-import { useContext, useReducer } from "react";
+import { useContext, useEffect, useReducer } from "react";
 import CardButton from "../CardButton/CardButton";
 import { CartContext } from "../../context";
 
-type Action = "add" | "substract";
+type Action = "add" | "substract" | "reset";
 
 function Card({ image, name, category, price }: Dessert) {
   const updateCounter = (state: number, action: Action) => {
     if (action === "add") {
       return state + 1;
+    } else if (action === "substract"){
+    return state - 1;} else {
+      return 0
     }
-    return state - 1;
   };
   const [counter, setCounter] = useReducer(updateCounter, 0);
   const cart = useContext(CartContext);
@@ -35,6 +37,13 @@ function Card({ image, name, category, price }: Dessert) {
       });
     }
   };
+
+  useEffect(() => {
+  const itemInCart = cart?.cart.find(item => item.name === name);
+  if (!itemInCart) {
+    setCounter('reset'); // reset if removed
+  } 
+}, [cart?.cart, name, counter]);
   return (
     <div className="card">
       <img className="card__image" src={image.desktop} alt="" />

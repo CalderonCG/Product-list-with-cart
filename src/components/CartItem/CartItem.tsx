@@ -3,8 +3,7 @@ import remove from '../../assets/icon-remove-item.svg'
 import type { CartItem } from '../../context';
 
 
-
-function CartItem({name, quantity, thumbnail, price}: CartItem) {
+function Item({name, quantity, price, removeItem}: CartItem & {removeItem: (name: string) => void;}) {
   return (
     <div className="item">
       <div className="item__data">
@@ -14,11 +13,11 @@ function CartItem({name, quantity, thumbnail, price}: CartItem) {
           <span className="item__total">${price * quantity}</span>
         </p>
       </div>
-      <button className="item__button">
+      <button className="item__button" onClick={()=> removeItem(name)}>
         <img className='item__icon' src={remove} alt="" />
       </button>
     </div>
   );
 }
 
-export default CartItem;
+export default Item;
