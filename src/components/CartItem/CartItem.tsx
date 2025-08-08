@@ -1,14 +1,17 @@
 import './CartItem.scss'
 import remove from '../../assets/icon-remove-item.svg'
+import type { CartItem } from '../../context';
 
-function CartItem() {
+
+
+function CartItem({name, quantity, thumbnail, price}: CartItem) {
   return (
     <div className="item">
       <div className="item__data">
-        <p className="item__name">Classic Tiramisu</p>
+        <p className="item__name">{name}</p>
         <p className="item__quantity">
-          1x <span className="item__price"><span className='item__at'>@ </span>$5.50</span>
-          <span className="item__total">$5.50</span>
+          {quantity}x <span className="item__price"><span className='item__at'>@ </span>${price}</span>
+          <span className="item__total">${price * quantity}</span>
         </p>
       </div>
       <button className="item__button">

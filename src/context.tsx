@@ -1,6 +1,6 @@
 import React, { createContext, useState, type ReactNode } from "react";
 
-type CartItem = {
+export type CartItem = {
   name: string;
   thumbnail: string;
   quantity: number;
@@ -23,7 +23,6 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   const addItem = (item: CartItem) => {
     if (cart.find((cartItem) => item.name === cartItem.name)) {
-      console.log('a')
       const newCart= cart.map((cartItem )=> (cartItem.name === item.name ? {...cartItem, quantity:item.quantity}: cartItem))
       .filter((cartItem) => cartItem.quantity > 0)
 

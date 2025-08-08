@@ -15,7 +15,6 @@ function Card({ image, name, category, price }: Dessert) {
   };
   const [counter, setCounter] = useReducer(updateCounter, 0);
   const cart = useContext(CartContext);
-  console.log(cart)
 
   const handleClick = (action: Action) => {
     setCounter(action);
