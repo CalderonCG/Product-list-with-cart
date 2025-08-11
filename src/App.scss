@@ -9,8 +9,11 @@ h1 {
   gap: 2px;
   padding: 4rem 7rem;
   align-items: flex-start;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
 
-  @media (max-width: 375px) {
+  @media (max-width: 860px) {
     padding: 2rem 0;
     align-items: center;
     flex-direction: column;
@@ -19,7 +22,7 @@ h1 {
   &__dessert {
     width: 65%;
     margin: 0;
-    @media (max-width: 375px) {
+    @media (max-width: 860px) {
       width: 90%;
     }
   }
@@ -30,7 +33,7 @@ h1 {
     gap: 3px;
     margin-top: 1rem;
 
-    @media (max-width: 375px) {
+    @media (max-width: 860px) {
       display: flex;
       flex-direction: column;
     }
@@ -39,7 +42,7 @@ h1 {
   &__cart {
     width: 35%;
 
-     @media (max-width: 375px) {
+     @media (max-width: 860px) {
     width: 90%;
   }
   }

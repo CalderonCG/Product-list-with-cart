@@ -15,7 +15,7 @@ type CartItemContext = {
 };
 
 export const CartContext = createContext<CartItemContext | undefined>(
-  {} as CartItemContext
+  undefined
 );
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {

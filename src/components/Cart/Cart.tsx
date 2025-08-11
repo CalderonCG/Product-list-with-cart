@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context";
 import Item from "../CartItem/CartItem";
 
-function Cart() {
+function Cart({showModal}:{showModal: (arg: boolean)=> void}) {
   const cartItems = useContext(CartContext)
   const [Total, setTotal] = useState(0);
 
@@ -42,12 +42,8 @@ function Cart() {
         <p>This is a <span className="cart__carbon">carbon-neutral</span> delivery</p>
       </div>
 
-      <button className="cart__confirm">Confirm Order</button>
+      <button className="cart__confirm" onClick={()=>showModal(true)}>Confirm Order</button>
       </> }
-      {/* <div className="cart__figure">
-        <img className="cart__empty" src={empty} alt="" />
-        <p className="cart__label">Your added items will appear here</p>
-      </div> */}
 
     </div>
   );

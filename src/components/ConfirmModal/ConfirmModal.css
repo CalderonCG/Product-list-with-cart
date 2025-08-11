@@ -1,0 +1,39 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+}
+.modal__backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  opacity: 50%;
+}
+.modal__container {
+  width: 50%;
+  background-color: white;
+  opacity: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 2rem;
+  justify-content: center;
+  border-radius: 1rem;
+}
+.modal__list {
+  width: 100%;
+  background-color: hsl(13, 31%, 94%);
+}/*# sourceMappingURL=ConfirmModal.css.map */
