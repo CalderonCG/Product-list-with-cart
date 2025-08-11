@@ -1,3 +1,4 @@
+/// <reference types="vite-plugin-svgr/client" />
 import CartIcon from "../../assets/icon-add-to-cart.svg?react";
 import AddIcon from "../../assets/icon-increment-quantity.svg?react";
 import SubstractIcon from "../../assets/icon-decrement-quantity.svg?react";
