@@ -3,7 +3,8 @@ import remove from '../../assets/icon-remove-item.svg'
 import type { CartItem } from '../../context';
 
 
-function Item({name, quantity, price, removeItem}: CartItem & {removeItem: (name: string) => void;}) {
+type ItemProps= CartItem & {removeItem: (name: string) => void;}
+function Item({name, quantity, price, removeItem}: ItemProps) {
   return (
     <div className="item">
       <div className="item__data">
