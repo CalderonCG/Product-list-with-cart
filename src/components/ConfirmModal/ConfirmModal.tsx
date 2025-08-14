@@ -38,7 +38,7 @@ function ConfirmModal({ showModal } : {showModal: (arg: boolean)=> void}) {
           </div>
         </div>
 
-        <button className="modal__button" onClick={()=>handleConfirm()}>Start New Order</button>
+        <button className="modal__button" onClick={handleConfirm}>Start New Order</button>
       </div>
     </div>
   );
