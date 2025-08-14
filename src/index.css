@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: "Red-Hat-Text", sans-serif;
+  background-color: hsl(26, 54%, 97%);
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=index.css.map */

@@ -3,10 +3,11 @@
 
 
 html, body, #root {
+  min-height: 100%;
   height: 100%;
   width: 100%;
   font-family: 'Red-Hat-Text', sans-serif;
-  background-color: v.$color-Rose-100;
+  background-color: v.$color-background;
   margin: 0;
   padding: 0;
 }
