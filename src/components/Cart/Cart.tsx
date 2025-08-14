@@ -10,7 +10,9 @@ function Cart({showModal}:{showModal: (arg: boolean)=> void}) {
   const [Total, setTotal] = useState(0);
 
   useEffect(() => {
-    if(cartItems){
+    if(!cartItems){
+    return}
+    else{
       let cartTotal = 0
       cartItems.cart.forEach(item => {
         cartTotal += item.price * item.quantity
