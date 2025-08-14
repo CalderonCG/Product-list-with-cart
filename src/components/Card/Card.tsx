@@ -6,7 +6,6 @@ import { CartContext } from "../../context";
 
 type Action = "add" | "substract" | "reset";
 
-function Card({ image, name, category, price }: Dessert) {
   const updateCounter = (state: number, action: Action) => {
     if (action === "add") {
       return state + 1;
@@ -15,6 +14,9 @@ function Card({ image, name, category, price }: Dessert) {
       return 0
     }
   };
+
+function Card({ image, name, category, price }: Dessert) {
+
   const [counter, setCounter] = useReducer(updateCounter, 0);
   const cart = useContext(CartContext);
 

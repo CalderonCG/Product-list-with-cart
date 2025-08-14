@@ -1,4 +1,4 @@
-import { createContext, useState, type ReactNode } from "react";
+import { createContext, useContext, useState, type ReactNode } from "react";
 
 export type CartItem = {
   name: string;
@@ -22,7 +22,9 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
   const addItem = (item: CartItem) => {
-    if (cart.find((cartItem) => item.name === cartItem.name)) {
+
+    const hasItem = cart.find((cartItem) => item.name === cartItem.name)
+    if (hasItem) {
       const newCart= cart.map((cartItem )=> (cartItem.name === item.name ? {...cartItem, quantity:item.quantity}: cartItem))
       .filter((cartItem) => cartItem.quantity > 0)
 
@@ -46,3 +48,13 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     </CartContext.Provider>
   );
 };
+
+
+export function useCart (){
+  const context = useContext(CartContext)
+  if (context === undefined){
+    
+		throw new Error('useCart must be used within a CountProvider')
+  }
+  return context
+}
